@@ -28,7 +28,12 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+# List of allowed hosts for CSRF protection
+CSRF_TRUSTED_ORIGINS = [
+    'https://hospital-management-api-jb3v.onrender.com',
+]
 
 
 # Application definition
